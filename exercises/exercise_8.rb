@@ -5,15 +5,9 @@ require_relative './exercise_3'
 require_relative './exercise_4'
 require_relative './exercise_5'
 require_relative './exercise_6'
-store = gets.chomp
-newStore = Store.create(
-  name: store
-  )
+require_relative './exercise_7'
 
-newStore.errors.full_messages.each do |message|
-  puts message
-end
-puts "Exercise 7"
-puts "----------"
 
-# Your code goes here ...
+@store1.employees.create(first_name: "Rose", last_name: "Virani", hourly_rate: 60)
+password = @store1.employees.last.password
+puts password
